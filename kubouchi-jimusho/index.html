@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行政書士事務所 | 手続きストレスを解消する専門家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc; /* ベースはごく薄いブルーグレー */
+            color: #334155; /* スレートグレー */
+        }
+        .main-navy { /* ディープネイビー (Slate-800より濃いめ) */
+            background-color: #11293c;
+            color: white;
+        }
+        .text-main-navy {
+            color: #11293c;
+        }
+        .accent-orange { /* ブライトオレンジ (Orange-600) */
+            background-color: #f97316;
+            color: white;
+        }
+        .text-accent-orange {
+            color: #f97316;
+        }
+        .shadow-action {
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(10px);
+                opacity: 1;
+            }
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー (ネイビーで信頼感を担保) -->
+    <header class="main-navy sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-wider text-white flex items-center">
+                <img src="images/zbr4ilz7_400x400.jpg" alt="行政書士徽章" class="w-10 h-10 mr-3 object-contain rounded-full">
+                <a href="#" class="hover:text-accent-orange transition duration-300">行政書士事務所</a>
+            </h1>
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-semibold">
+                <a href="#" class="hover:text-accent-orange transition duration-300">ホーム</a>
+                <a href="services.html" class="hover:text-accent-orange transition duration-300">主な取扱業務</a>
+                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金表</a>
+                <a href="greeting.html" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+                <a href="contents.html" class="hover:text-accent-orange transition duration-300">コンテンツ</a>
+                <a href="about.html" class="hover:text-accent-orange transition duration-300">事務所概要</a>
+                <a href="#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">お問い合わせ</a>
+            </nav>
+            <!-- スマホ用メニューボタン -->
+            <div class="md:hidden relative">
+                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]">☰</button>
+                <!-- ドロワーメニュー -->
+                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
+                    <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">主な取扱業務</a>
+                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金表</a>
+                    <a href="greeting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                    <a href="contents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">コンテンツ</a>
+                    <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">事務所概要</a>
+                    <a href="#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">お問い合わせ</a>
+                </div>
+            </div>
+            
+            <!-- スマホメニュー用のJavaScript -->
+            <script>
+                document.getElementById('menuButton').addEventListener('click', function() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('hidden');
+                });
+                
+                // メニュー外をクリックで閉じる
+                document.addEventListener('click', function(event) {
+                    const menu = document.getElementById('mobileMenu');
+                    const button = document.getElementById('menuButton');
+                    if (!menu.contains(event.target) && !button.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <!-- メインビジュアル / ヒーローセクション -->
+    <section class="relative pt-24 pb-24 md:pt-40 md:pb-32 overflow-hidden border-b border-gray-200" style="background: linear-gradient(135deg, rgba(17, 41, 60, 0.95) 0%, rgba(17, 41, 60, 0.85) 100%), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;">
+        <div class="container mx-auto px-6 flex flex-col items-center text-center relative z-10">
+            <p class="text-xl md:text-2xl text-accent-orange font-bold mb-4 tracking-widest uppercase">BUSINESS ACCELERATION PARTNER</p>
+            <h2 class="text-4xl md:text-6xl font-black leading-tight text-white mb-6">
+                許認可取得から<br>ビジネス加速まで<br><span class="underline decoration-accent-orange decoration-4">伴走型の行政書士事務所</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 max-w-3xl">
+                営業許認可の取得だけでなく、その後のホームページ制作、<br class="hidden md:inline">アプリ開発、補助金申請まで。<br class="hidden md:inline">あなたのビジネスを全力でサポートします。
+            </p>
+            <div class="flex space-x-4">
+                <a href="#contact" class="accent-orange text-white font-black py-3 px-8 rounded-full text-xl hover:bg-orange-500 transition duration-300 shadow-action inline-block transform hover:scale-105">
+                    今すぐ無料相談を予約
+                </a>
+            </div>
+        </div>
+        
+        <!-- スクロールダウンインジケーター -->
+        <div class="absolute bottom-8 left-0 right-0 z-10 flex justify-center">
+            <a href="#resolve" class="cursor-pointer animate-bounce-slow">
+                <div class="flex flex-col items-center text-white hover:text-accent-orange transition duration-300">
+                    <span class="text-sm mb-2">SCROLL</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 解決の流れ (Resolve) - 3ステップで明快に -->
+    <section id="resolve" class="py-16 md:py-24 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold text-main-navy mb-12">手続き完了までのシンプルな3ステップ</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- ステップ 1: 相談 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-accent-orange">
+                    <p class="text-4xl font-extrabold text-accent-orange mb-3">STEP 1</p>
+                    <h4 class="text-2xl font-bold mb-3 text-main-navy">課題を話す（無料相談）</h4>
+                    <p class="text-gray-600 text-sm">まずはお電話かメールで状況をお聞かせください。問題点を明確にし、最適な解決策をご提示します。</p>
+                </div>
+
+                <!-- ステップ 2: 契約 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-accent-orange">
+                    <p class="text-4xl font-extrabold text-accent-orange mb-3">STEP 2</p>
+                    <h4 class="text-2xl font-bold mb-3 text-main-navy">専門家に任せる（委任契約）</h4>
+                    <p class="text-gray-600 text-sm">料金と手続きの流れにご納得いただいてから契約。以後の書類作成や役所対応は全て当事務所が代行します。</p>
+                </div>
+
+                <!-- ステップ 3: 完了 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-8 border-accent-orange">
+                    <p class="text-4xl font-extrabold text-accent-orange mb-3">STEP 3</p>
+                    <h4 class="text-2xl font-bold mb-3 text-main-navy">結果を受け取る（完了報告）</h4>
+                    <p class="text-gray-600 text-sm">手続き完了後、結果書類をお渡しし、今後の注意点をご説明。迅速な解決が実現します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 得意分野 (Case) - 具体的な解決を提示 -->
+    <section id="case" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-5xl">
+            <h3 class="text-3xl md:text-4xl font-bold text-main-navy mb-12">当事務所が得意とする「スピード解決」分野</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 得意分野 1: 迅速な許認可 -->
+                <div class="p-8 border-4 border-gray-200 rounded-2xl text-left bg-gray-50 hover:border-accent-orange transition duration-300">
+                    <h4 class="text-3xl font-extrabold text-accent-orange mb-3">最短開業サポート</h4>
+                    <p class="text-main-navy text-xl font-bold mb-2">飲食店・薬局・古物商などの各種営業許可</p>
+                    <p class="text-gray-600 text-sm">「いつまでに開業したい」という期限を最優先に、必要な書類を最小限に抑え、手続きを急ぎます。ビジネスの機会を逃しません。</p>
+                </div>
+
+                <!-- 得意分野 2: ITサポート -->
+                <div class="p-8 border-4 border-gray-200 rounded-2xl text-left bg-gray-50 hover:border-accent-orange transition duration-300">
+                    <h4 class="text-3xl font-extrabold text-accent-orange mb-3">IT活用支援</h4>
+                    <p class="text-main-navy text-xl font-bold mb-2">各種許認可取得後のITサポート</p>
+                    <p class="text-gray-600 text-sm">許認可取得後の業務効率化をサポート。電子申請システムの導入支援から、デジタル化に伴う業務フローの見直しまで、お客様の事業に最適なITソリューションを提案します。</p>
+                </div>
+
+                <!-- 得意分野 3: スムーズな相続 -->
+                <div class="p-8 border-4 border-gray-200 rounded-2xl text-left bg-gray-50 hover:border-accent-orange transition duration-300">
+                    <h4 class="text-3xl font-extrabold text-accent-orange mb-3">もめない相続設計</h4>
+                    <p class="text-main-navy text-xl font-bold mb-2">遺言書作成・遺産分割協議書・家族信託</p>
+                    <p class="text-gray-600 text-sm">家族間のデリケートな問題に寄り添い、将来の紛争を未然に防ぐための「円満な」相続手続きを設計・実行します。</p>
+                </div>
+
+            </div>
+
+            <a href="#" class="main-navy text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-700 transition duration-300 mt-12 inline-block shadow-lg">
+                その他の実績・業務内容を見る
+            </a>
+        </div>
+    </section>
+
+    <!-- 料金表 (Pricing) -->
+    <section id="pricing" class="py-16 md:py-24 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-main-navy mb-4 text-center">明確で透明性のある料金体系</h3>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                隠れた費用はありません。見積もり時に料金を明示し、納得いただいてからのご契約となります。
+            </p>
+
+            <!-- タブ切り替え -->
+            <div class="flex justify-center mb-12 space-x-4 flex-wrap gap-2">
+                <button class="pricing-tab active px-6 py-3 rounded-full font-bold text-white bg-orange-600 hover:bg-orange-500 transition duration-300 border-2 border-orange-600 shadow-md" data-tab="business">
+                    法人設立・営業許可
+                </button>
+                <button class="pricing-tab px-6 py-3 rounded-full font-bold bg-white text-gray-700 hover:bg-gray-100 transition duration-300 border-2 border-gray-200 hover:border-accent-orange" data-tab="inheritance">
+                    相続・遺言
+                </button>
+                <button class="pricing-tab px-6 py-3 rounded-full font-bold bg-white text-gray-700 hover:bg-gray-100 transition duration-300 border-2 border-gray-200 hover:border-accent-orange" data-tab="other">
+                    その他手続き
+                </button>
+            </div>
+
+            <!-- 法人設立・営業許可タブ -->
+            <div id="business" class="pricing-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">会社設立（株式会社）</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥55,000</p>
+                        <p class="text-sm text-gray-600 mb-6">別途：登録免許税、定款認証料</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 定款作成・認証</li>
+                            <li>✓ 登記申請書作成</li>
+                            <li>✓ 法務局への提出代行</li>
+                            <li>✓ 打ち合わせ・相談無料</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">飲食店営業許可</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥38,500</p>
+                        <p class="text-sm text-gray-600 mb-6">保健所申請まで一括対応</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 営業許可申請書作成</li>
+                            <li>✓ 図面・調理施設図の作成</li>
+                            <li>✓ 保健所への申請代行</li>
+                            <li>✓ 検査立ち会いサポート</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">古物商許可申請</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥28,000</p>
+                        <p class="text-sm text-gray-600 mb-6">迅速な警察申請</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 申請書類一式作成</li>
+                            <li>✓ 誓約書・身分証確認</li>
+                            <li>✓ 警察への申請代行</li>
+                            <li>✓ 最短で許可取得</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 相続・遺言タブ（初期非表示） -->
+            <div id="inheritance" class="pricing-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">遺言書作成（自筆証書）</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥22,000</p>
+                        <p class="text-sm text-gray-600 mb-6">法的効力のある遺言書</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 相続人調査</li>
+                            <li>✓ 遺言書原案作成</li>
+                            <li>✓ 法的チェック</li>
+                            <li>✓ アドバイス付き</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">遺産分割協議書作成</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥38,500</p>
+                        <p class="text-sm text-gray-600 mb-6">相続人全員の同意を記録</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 遺産調査・リスト化</li>
+                            <li>✓ 協議書作成</li>
+                            <li>✓ 相続人間の調整</li>
+                            <li>✓ 登記申請支援</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">相続手続き一式代行</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥110,000〜</p>
+                        <p class="text-sm text-gray-600 mb-6">遺産規模による変動</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 戸籍謄本取得</li>
+                            <li>✓ 遺産分割協議</li>
+                            <li>✓ 各種登記申請</li>
+                            <li>✓ 完全サポート</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- その他手続きタブ（初期非表示） -->
+            <div id="other" class="pricing-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">建設業許可申請</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥132,000</p>
+                        <p class="text-sm text-gray-600 mb-6">一般建設業・特定建設業対応</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 申請要件確認</li>
+                            <li>✓ 書類一式作成</li>
+                            <li>✓ 許可局へ申請</li>
+                            <li>✓ 打ち合わせ無制限</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h4 class="text-2xl font-bold text-main-navy mb-4">入国管理・ビザ申請</h4>
+                        <p class="text-4xl font-extrabold text-accent-orange mb-2">¥48,000</p>
+                        <p class="text-sm text-gray-600 mb-6">就労ビザ・家族呼び寄せ等</p>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-6">
+                            <li>✓ 申請書類作成</li>
+                            <li>✓ 翻訳・認証</li>
+                            <li>✓ 入管申請代行</li>
+                            <li>✓ 許可取得まで対応</li>
+                        </ul>
+                        <a href="#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 注釈 -->
+            <div class="mt-12 p-6 bg-white rounded-xl border-l-4 border-accent-orange text-left">
+                <p class="text-sm text-gray-600 mb-3"><span class="font-bold text-main-navy">※ご注意</span></p>
+                <ul class="text-sm text-gray-600 space-y-2">
+                    <li>• 上記料金は基本報酬です。別途実費（登録免許税、手数料、郵送料など）が必要な場合がございます。</li>
+                    <li>• 複雑な案件や急ぎの案件については、別途お見積もりさせていただきます。</li>
+                    <li>• 初回相談は無料です。お気軽にお問い合わせください。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問い合わせエリア (Contact) - 安心感を強調したCTA -->
+    <section id="contact" class="py-16 md:py-24 accent-orange">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-black text-white mb-6">不安を、希望に変えましょう。</h3>
+            <p class="text-xl text-gray-100 mb-10">あなたにとって最善の解決策を、私たちが見つけます。</p>
+            
+            <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-12">
+                <!-- 電話窓口 (安心感) -->
+                <div class="bg-white p-6 rounded-xl shadow-action md:w-1/3">
+                    <p class="text-2xl font-bold text-accent-orange mb-3">お電話でのご相談</p>
+                    <a href="tel:0000-XX-XXXX" class="text-4xl font-extrabold text-main-navy hover:text-accent-orange transition duration-300 block mb-2">
+                        0000-XX-XXXX
+                    </a>
+                    <p class="text-sm text-gray-600">平日 9:00〜18:00 (今すぐ話したい方へ)</p>
+                </div>
+
+                <!-- メールフォーム窓口 (行動力) -->
+                <div class="main-navy p-6 rounded-xl shadow-action md:w-1/3">
+                    <p class="text-2xl font-bold text-white mb-3">24時間受付フォーム</p>
+                    <a href="#" class="accent-orange text-white font-bold py-3 px-6 rounded-full text-xl hover:bg-orange-500 transition duration-300 inline-block w-full">
+                        メールで問い合わせる
+                    </a>
+                    <p class="text-sm text-gray-300 mt-2">詳細を整理してから送りたい方へ。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="main-navy py-8 text-sm text-gray-400">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="space-x-4 mb-4">
+                <a href="#services" class="hover:text-white transition duration-300">主な取扱業務</a>
+                <span>|</span>
+                <a href="#pricing" class="hover:text-white transition duration-300">料金表</a>
+                <span>|</span>
+                <a href="#about" class="hover:text-white transition duration-300">事務所概要</a>
+            </nav>
+            <p class="mt-4 text-gray-500">&copy; 2025 行政書士事務所. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 料金表のタブ切り替え
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.pricing-tab');
+            const tabContents = document.querySelectorAll('.pricing-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // すべてのタブからactiveクラスを削除し、非アクティブなスタイルを適用
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-white', 'bg-orange-600', 'hover:bg-orange-500', 'border-orange-600', 'shadow-md');
+                        btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:border-accent-orange', 'border-gray-200');
+                    });
+                    // クリックされたタブにactiveクラスを追加
+                    this.classList.add('active', 'text-white', 'bg-orange-600', 'hover:bg-orange-500', 'border-orange-600', 'shadow-md');
+                    this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'hover:border-accent-orange', 'border-gray-200');
+                    
+                    // すべてのコンテンツを非表示
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    // クリックされたタブに対応するコンテンツを表示
+                    const targetId = this.getAttribute('data-tab');
+                    document.getElementById(targetId).classList.remove('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

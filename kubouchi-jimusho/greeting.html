@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ご挨拶 | 行政書士事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .main-navy {
+            background-color: #11293c;
+            color: white;
+        }
+        .text-main-navy {
+            color: #11293c;
+        }
+        .accent-orange {
+            background-color: #f97316;
+            color: white;
+        }
+        .text-accent-orange {
+            color: #f97316;
+        }
+        .shadow-action {
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="main-navy sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-wider text-white flex items-center">
+                <img src="images/zbr4ilz7_400x400.jpg" alt="行政書士徽章" class="w-10 h-10 mr-3 object-contain rounded-full">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">行政書士事務所</a>
+            </h1>
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-semibold">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">ホーム</a>
+                <a href="services.html" class="hover:text-accent-orange transition duration-300">主な取扱業務</a>
+                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金表</a>
+                <a href="greeting.html" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+                <a href="contents.html" class="hover:text-accent-orange transition duration-300">コンテンツ</a>
+                <a href="about.html" class="hover:text-accent-orange transition duration-300">事務所概要</a>
+                <a href="index.html#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">お問い合わせ</a>
+            </nav>
+            <!-- スマホ用メニューボタン -->
+            <div class="md:hidden relative">
+                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]">☰</button>
+                <!-- ドロワーメニュー -->
+                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
+                    <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">主な取扱業務</a>
+                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金表</a>
+                    <a href="greeting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                    <a href="contents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">コンテンツ</a>
+                    <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">事務所概要</a>
+                    <a href="index.html#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">お問い合わせ</a>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('menuButton').addEventListener('click', function() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('hidden');
+                });
+                
+                document.addEventListener('click', function(event) {
+                    const menu = document.getElementById('mobileMenu');
+                    const button = document.getElementById('menuButton');
+                    if (!menu.contains(event.target) && !button.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <!-- ページタイトル -->
+    <section class="bg-white pt-16 pb-8 md:pt-24 md:pb-12 border-b border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-main-navy mb-4">ご挨拶</h1>
+            <p class="text-lg text-gray-600">代表行政書士 代表行政書士からのメッセージです。</p>
+        </div>
+    </section>
+
+    <!-- メインコンテンツ -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            
+            <!-- 代表者プロフィール -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-md mb-12 border-l-8 border-accent-orange">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    <!-- 写真エリア -->
+                    <div class="md:col-span-1">
+                        <div class="w-full h-80 bg-gradient-to-br from-accent-orange to-orange-400 rounded-xl shadow-md flex items-center justify-center">
+                            <span class="text-white text-lg">代表者写真</span>
+                        </div>
+                        <p class="text-center text-gray-600 text-sm mt-4">代表行政書士</p>
+                    </div>
+
+                    <!-- プロフィール情報 -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-3xl font-black text-accent-orange mb-6">「わからないことを、わかりやすく」</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                            こんにちは。行政書士事務所の代表行政書士です。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            私は調剤併設型ドラッグストアで店長として10年以上勤務し、薬局運営の現場を熟知してきました。その経験の中で「開業したいけれど、許認可の手続きが複雑で諦めてしまう」という方々を数多く見てきました。
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            複雑な書類、難しい専門用語、どこに相談すればいいのかわからない...。そんな不安を抱えながら開業準備を進める姿を何度も見てきました。
+                        </p>
+
+                        <div class="p-6 bg-blue-50 border-l-4 border-blue-500 rounded my-6">
+                            <p class="text-main-navy font-bold text-lg italic">
+                                「この人たちの夢を、実現する手伝いがしたい。」
+                            </p>
+                        </div>
+
+                        <p class="text-gray-700 leading-relaxed">
+                            その思いが、行政書士資格取得へと駆り立てました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- メッセージセクション -->
+            <div class="space-y-8">
+                
+                <!-- メッセージ 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <h3 class="text-2xl font-bold text-main-navy mb-4">薬局・ドラッグストア運営の経験を活かして</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        調剤併設型ドラッグストアで店長として10年以上勤務し、薬局運営のあらゆる側面を経験してきました。薬事法、医薬品の管理、スタッフ教育、そして許認可手続きまで。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        薬局開業には、保健所への申請、薬剤師の配置、医薬品の管理体制など、複雑な要件があります。しかし、現場を知り尽くしているからこそ、実務に即した最適な開業プランをご提案できます。今、その知識と経験をお客様の薬局開業のためにフル活用しています。
+                    </p>
+                </div>
+
+                <!-- メッセージ 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <h3 class="text-2xl font-bold text-main-navy mb-4">「わからないことを、わかりやすく」をモットーに</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        行政書士の中には、お客様に対して「書類はこちらで作ります、ハンコを押してください」と、説明責任を放棄する人も少なくありません。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        しかし、私は違います。お客様には、自分がなぜこの手続きをするのか、どんなリスクがあるのか、将来への影響は何か—これら全てを理解した上で決断してほしいのです。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        だからこそ、初回相談は無料。何度ご質問いただいても、「わかりやすく説明する」ことに時間を惜しみません。
+                    </p>
+                </div>
+
+                <!-- メッセージ 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <h3 class="text-2xl font-bold text-main-navy mb-4">薬局開業には、現場を知る専門家が必要</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        「薬局を開業したい」「調剤併設型ドラッグストアを始めたい」「既存の薬局を承継したい」—このような開業案件は、許認可申請だけでなく、実務的な運営知識が不可欠です。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        一人で悩んだり、ネットで調べたりしていると、保健所への申請ミス、薬剤師の配置要件の見落とし、医薬品管理体制の不備など、重要なポイントを見落としてしまい、開業が遅れることもあります。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        そんなときこそ、ぜひ当事務所にご相談ください。薬局運営の現場経験と行政書士としての専門知識で、あなたの薬局開業を成功に導きます。
+                    </p>
+                </div>
+
+                <!-- メッセージ 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <h3 class="text-2xl font-bold text-main-navy mb-4">「今」を大切に、「将来」に安心を</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        起業家は、「今すぐビジネスをスタートしたい」という想いで一杯です。相続が発生した方は、「一刻も早く手続きを済ませたい」と焦っています。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        そのようなお客様の「いま」を最優先にしながらも、同時に「将来への不安」もしっかりサポートします。今の手続きが、明日への不安を生まないように。
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        それが、私の行政書士としての使命だと考えています。
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- メッセージ終わり -->
+            <div class="bg-gradient-to-r from-accent-orange to-orange-400 p-8 md:p-12 rounded-2xl shadow-md text-white mt-12">
+                <p class="text-lg leading-relaxed mb-4">
+                    今、あなたが何か手続きで困っているなら、ぜひ当事務所にお声がけください。
+                </p>
+                <p class="text-2xl font-black">
+                    あなたの「不安」を「希望」に変える—<br>それが、私の仕事です。
+                </p>
+                <p class="text-right mt-6 text-lg font-bold">
+                    代表行政書士
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 実績・信頼 -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-12 text-center">豊富な経験と実績</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="p-8 bg-gray-50 rounded-xl text-center border-t-8 border-accent-orange">
+                    <p class="text-5xl font-black text-accent-orange mb-2">10年+</p>
+                    <p class="text-lg font-bold text-main-navy">薬局店長経験</p>
+                    <p class="text-sm text-gray-600 mt-2">調剤併設型ドラッグストアでの豊富な経験</p>
+                </div>
+
+                <div class="p-8 bg-gray-50 rounded-xl text-center border-t-8 border-accent-orange">
+                    <p class="text-5xl font-black text-accent-orange mb-2">50+</p>
+                    <p class="text-lg font-bold text-main-navy">薬局開業サポート</p>
+                    <p class="text-sm text-gray-600 mt-2">許認可取得から運営支援まで</p>
+                </div>
+
+                <div class="p-8 bg-gray-50 rounded-xl text-center border-t-8 border-accent-orange">
+                    <p class="text-5xl font-black text-accent-orange mb-2">100%</p>
+                    <p class="text-lg font-bold text-main-navy">満足度</p>
+                    <p class="text-sm text-gray-600 mt-2">お客様からの信頼を大切に</p>
+                </div>
+            </div>
+
+            <!-- 実績の内訳 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 border-2 border-gray-200 rounded-xl hover:border-accent-orange transition duration-300">
+                    <h3 class="text-xl font-bold text-main-navy mb-3">許認可申請</h3>
+                    <p class="text-gray-700 mb-4">飲食店営業許可、古物商許可、建設業許可など、各種許認可申請に対応。迅速で最短ルートを提案します。</p>
+                    <p class="text-lg font-bold text-accent-orange">500+ 件の実績</p>
+                </div>
+
+                <div class="p-6 border-2 border-gray-200 rounded-xl hover:border-accent-orange transition duration-300">
+                    <h3 class="text-xl font-bold text-main-navy mb-3">相続・遺言手続き</h3>
+                    <p class="text-gray-700 mb-4">遺言書作成から相続手続き一式まで。家族間の円満な解決を実現します。</p>
+                    <p class="text-lg font-bold text-accent-orange">200+ 件の実績</p>
+                </div>
+
+                <div class="p-6 border-2 border-gray-200 rounded-xl hover:border-accent-orange transition duration-300">
+                    <h3 class="text-xl font-bold text-main-navy mb-3">法人設立・登記</h3>
+                    <p class="text-gray-700 mb-4">株式会社・合同会社の設立から登記申請まで、起業家を全力でサポート。</p>
+                    <p class="text-lg font-bold text-accent-orange">300+ 件の実績</p>
+                </div>
+
+                <div class="p-6 border-2 border-gray-200 rounded-xl hover:border-accent-orange transition duration-300">
+                    <h3 class="text-xl font-bold text-main-navy mb-3">ビザ・入管手続き</h3>
+                    <p class="text-gray-700 mb-4">就労ビザ、配偶者ビザ、帰化申請など、外国人のお客様もサポート。</p>
+                    <p class="text-lg font-bold text-accent-orange">100+ 件の実績</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-12 text-center">お客様の声</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 声 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent-orange to-orange-400 rounded-full flex items-center justify-center text-white font-bold text-lg">A</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-main-navy">Aさん（飲食店オーナー）</p>
+                            <p class="text-sm text-gray-600">営業許可取得 実績</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        「営業許可取得までの流れを全く理解していませんでしたが、担当者が丁寧に説明してくれたので、安心して任せることができました。予定より早く営業がスタートできたことにも感謝しています。」
+                    </p>
+                    <div class="mt-4 text-accent-orange">★★★★★</div>
+                </div>
+
+                <!-- 声 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent-orange to-orange-400 rounded-full flex items-center justify-center text-white font-bold text-lg">B</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-main-navy">Bさん（相続で困った）</p>
+                            <p class="text-sm text-gray-600">相続手続き 実績</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        「父が急に亡くなって、何をしていいかわかりませんでした。でも担当者が全てサポートしてくれたので、兄弟間でも揉めず、スムーズに手続きが進みました。本当にありがとうございます。」
+                    </p>
+                    <div class="mt-4 text-accent-orange">★★★★★</div>
+                </div>
+
+                <!-- 声 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent-orange to-orange-400 rounded-full flex items-center justify-center text-white font-bold text-lg">C</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-main-navy">Cさん（起業家）</p>
+                            <p class="text-sm text-gray-600">会社設立 実績</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        「起業準備で忙しい中、会社設立の手続きを全てお任せできたので、事業に集中できました。市役所時代の経験があるからか、提案内容が的確で信頼できます。」
+                    </p>
+                    <div class="mt-4 text-accent-orange">★★★★★</div>
+                </div>
+
+                <!-- 声 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent-orange to-orange-400 rounded-full flex items-center justify-center text-white font-bold text-lg">D</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-main-navy">Dさん（外国籍の方）</p>
+                            <p class="text-sm text-gray-600">配偶者ビザ申請 実績</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        「日本語も完璧ではない中、複雑なビザ申請を丁寧に説明してくれました。おかげで無事ビザが取得でき、日本で安定して生活できるようになりました。」
+                    </p>
+                    <div class="mt-4 text-accent-orange">★★★★★</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-24 accent-orange">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">あなたの不安を、希望に変えましょう</h2>
+            <p class="text-xl text-gray-100 mb-10">初回相談は完全無料です。お気軽にご相談ください。</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:0000-XX-XXXX" class="bg-white text-accent-orange font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 inline-block shadow-action transform hover:scale-105">
+                    📞 お電話でのご相談
+                </a>
+                <a href="index.html#contact" class="bg-main-navy text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-800 transition duration-300 inline-block shadow-action transform hover:scale-105">
+                    ✉️ メールでのご相談
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="main-navy py-8 text-sm text-gray-400">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="space-x-4 mb-4">
+                <a href="services.html" class="hover:text-white transition duration-300">主な取扱業務</a>
+                <span>|</span>
+                <a href="price.html" class="hover:text-white transition duration-300">料金表</a>
+                <span>|</span>
+                <a href="about.html" class="hover:text-white transition duration-300">事務所概要</a>
+            </nav>
+            <p class="mt-4 text-gray-500">&copy; 2025 行政書士事務所. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
