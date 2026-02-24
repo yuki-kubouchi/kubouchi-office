@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薬局の開業手続きはどうやって進めればいい？ | 行政書士事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .main-navy {
+            background-color: #11293c;
+            color: white;
+        }
+        .text-main-navy {
+            color: #11293c;
+        }
+        .accent-orange {
+            background-color: #f97316;
+            color: white;
+        }
+        .text-accent-orange {
+            color: #f97316;
+        }
+        .shadow-action {
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
+        }
+        .article-content h2 {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: #11293c;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #f97316;
+        }
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #11293c;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+        }
+        .article-content ul, .article-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+        }
+        .article-content ul li {
+            list-style-type: disc;
+            margin-bottom: 0.5rem;
+        }
+        .article-content ol li {
+            list-style-type: decimal;
+            margin-bottom: 0.5rem;
+        }
+        .info-box {
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .tip-box {
+            background-color: #f0f9ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="main-navy sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-wider text-white flex items-center">
+                <img src="images/zbr4ilz7_400x400.jpg" alt="行政書士徽章" class="w-10 h-10 mr-3 object-contain rounded-full">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">行政書士事務所</a>
+            </h1>
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-semibold">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">ホーム</a>
+                <a href="services.html" class="hover:text-accent-orange transition duration-300">主な取扱業務</a>
+                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金表</a>
+                <a href="index.html#greeting" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+                <a href="contents.html" class="hover:text-accent-orange transition duration-300">コンテンツ</a>
+                <a href="index.html#about" class="hover:text-accent-orange transition duration-300">事務所概要</a>
+                <a href="index.html#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">お問い合わせ</a>
+            </nav>
+            <!-- スマホ用メニューボタン -->
+            <div class="md:hidden relative">
+                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]">☰</button>
+                <!-- ドロワーメニュー -->
+                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
+                    <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">主な取扱業務</a>
+                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金表</a>
+                    <a href="index.html#greeting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                    <a href="contents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">コンテンツ</a>
+                    <a href="index.html#about" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">事務所概要</a>
+                    <a href="index.html#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">お問い合わせ</a>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('menuButton').addEventListener('click', function() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('hidden');
+                });
+                
+                document.addEventListener('click', function(event) {
+                    const menu = document.getElementById('mobileMenu');
+                    const button = document.getElementById('menuButton');
+                    if (!menu.contains(event.target) && !button.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-accent-orange">ホーム</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <a href="contents.html" class="text-gray-600 hover:text-accent-orange">コンテンツ</a>
+                <span class="mx-2 text-gray-400">/</span>
+                <span class="text-gray-800">薬局の開業手続きはどうやって進めればいい？</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 記事ヘッダー -->
+    <section class="bg-white pt-12 pb-8 border-b border-gray-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-4">
+                <span class="inline-block px-4 py-2 text-sm font-bold text-white bg-indigo-500 rounded-full">営業許認可</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-main-navy mb-6 leading-tight">薬局の開業手続きはどうやって進めればいい？</h1>
+            <div class="flex items-center text-sm text-gray-600 space-x-4">
+                <span>📅 2026年1月25日</span>
+                <span>⏱ 読む時間: 12分</span>
+                <span>✍️ 行政書士事務所</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 記事本文 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="article-content">
+                
+                <p class="text-xl font-semibold text-gray-700 mb-8">
+                    薬局を開業するには、薬機法（医薬品医療機器等法）に基づく許可や各種届出が必要です。手続きは複雑で、漏れがあると開業が遅れる可能性があります。この記事では、薬局開業に必要な手続きを詳しく解説します。
+                </p>
+
+                <h2>1. 薬局開設許可（必須）</h2>
+                
+                <h3>薬局開設許可とは</h3>
+                <p>
+                    薬局を開設するには、都道府県知事から「薬局開設許可」を取得する必要があります。これは薬機法に基づく許可で、薬局の設備や管理体制が法令の基準を満たしているかが審査されます。
+                </p>
+
+                <div class="warning-box">
+                    <h4 class="font-bold text-lg mb-2 text-red-600">⚠️ 重要な注意点</h4>
+                    <p class="mb-0">薬局開設許可を受けずに薬局を営業すると、薬機法違反となり、3年以下の懲役または300万円以下の罰金が科される可能性があります。さらに、法人の場合は1億円以下の罰金が科されることもあります。</p>
+                </div>
+
+                <h3>申請先</h3>
+                <p>
+                    薬局の所在地を管轄する保健所（都道府県または保健所設置市・特別区）に申請します。
+                </p>
+
+                <h3>申請の流れ</h3>
+                <ol>
+                    <li><strong>事前相談</strong>：薬局の設計段階で保健所に相談し、構造設備基準を確認</li>
+                    <li><strong>管理薬剤師の確保</strong>：薬局には必ず管理薬剤師を配置する必要があります</li>
+                    <li><strong>申請書類の準備・提出</strong>：開設予定日の2〜3か月前までに申請</li>
+                    <li><strong>現地調査</strong>：保健所の担当者が薬局を訪問し、設備や構造を確認</li>
+                    <li><strong>許可証交付</strong>：審査に合格すると許可証が交付される（有効期間6年）</li>
+                </ol>
+
+                <h3>構造設備基準</h3>
+                <p>薬局は、以下の構造設備基準を満たす必要があります：</p>
+                <ul>
+                    <li><strong>調剤室</strong>：6.6㎡以上の専用スペース、他の場所と明確に区別</li>
+                    <li><strong>待合場所</strong>：患者が待機できる適切なスペース</li>
+                    <li><strong>服薬指導ができる場所</strong>：プライバシーに配慮した相談窓口</li>
+                    <li><strong>医薬品の貯蔵設備</strong>：鍵をかけた保管庫、冷蔵設備</li>
+                    <li><strong>調剤に必要な設備</strong>：計量器、混合器、調剤台など</li>
+                    <li><strong>手洗い設備</strong>：調剤室内に設置</li>
+                    <li><strong>換気設備</strong>：適切な換気ができる設備</li>
+                    <li><strong>採光及び照明設備</strong>：適切な明るさを確保</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4 class="font-bold text-lg mb-2 text-blue-600">💡 アドバイス</h4>
+                    <p class="mb-0">薬局の内装設計を始める前に、必ず保健所に図面を持参して事前相談を受けましょう。構造設備基準を満たしていないことが後から判明すると、大規模な改修工事が必要になる場合があります。</p>
+                </div>
+
+                <h3>必要な申請書類</h3>
+                <ul>
+                    <li>薬局開設許可申請書</li>
+                    <li>申請者の履歴書（個人の場合）または登記事項証明書（法人の場合）</li>
+                    <li>管理薬剤師の薬剤師免許証の写し</li>
+                    <li>管理薬剤師の雇用契約書または雇用証明書</li>
+                    <li>薬局の平面図・設備配置図</li>
+                    <li>薬局の構造設備概要書</li>
+                    <li>法人の定款の写し（法人の場合）</li>
+                    <li>建物の賃貸借契約書の写し（賃貸の場合）</li>
+                    <li>医薬品販売業許可申請書（店舗販売業の許可も必要な場合）</li>
+                </ul>
+
+                <h3>申請手数料</h3>
+                <p>
+                    都道府県により異なりますが、一般的に30,000円〜40,000円程度です。
+                </p>
+
+                <h2>2. 管理薬剤師の配置（必須）</h2>
+                
+                <p>
+                    薬局には、必ず「管理薬剤師」を1名配置しなければなりません。管理薬剤師は、薬局の業務全般を監督し、医薬品の適正な管理と調剤業務の統括を行います。
+                </p>
+
+                <h3>管理薬剤師の要件</h3>
+                <ul>
+                    <li><strong>薬剤師免許</strong>：薬剤師国家試験に合格し、薬剤師免許を持っていること</li>
+                    <li><strong>実務経験</strong>：原則として、薬局または医薬品販売業での実務経験が必要</li>
+                    <li><strong>専念義務</strong>：その薬局以外で薬剤師としての業務に従事しないこと（兼任制限）</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4 class="font-bold text-lg mb-2 text-accent-orange">📌 重要ポイント</h4>
+                    <p class="mb-0">管理薬剤師は、原則として他の薬局や医療機関で薬剤師業務を兼任することができません。ただし、都道府県知事の許可を得れば、週32時間を超えない範囲で兼任が可能な場合があります。</p>
+                </div>
+
+                <h3>管理薬剤師の届出</h3>
+                <p>
+                    薬局開設許可申請時に、管理薬剤師を届け出る必要があります。また、管理薬剤師が変更になった場合は、30日以内に変更届を提出しなければなりません。
+                </p>
+
+                <h2>3. 保険薬局指定申請（保険調剤を行う場合）</h2>
+                
+                <p>
+                    健康保険を使った調剤（保険調剤）を行う場合は、薬局開設許可とは別に、地方厚生局から「保険薬局」の指定を受ける必要があります。
+                </p>
+
+                <h3>申請の流れ</h3>
+                <ol>
+                    <li><strong>薬局開設許可の取得</strong>：まず都道府県から薬局開設許可を取得</li>
+                    <li><strong>保険薬局指定申請</strong>：地方厚生局に申請書類を提出</li>
+                    <li><strong>実地指導</strong>：地方厚生局の担当者が現地で確認</li>
+                    <li><strong>指定通知</strong>：審査に合格すると保険薬局に指定される</li>
+                </ol>
+
+                <h3>必要な申請書類</h3>
+                <ul>
+                    <li>保険薬局指定申請書</li>
+                    <li>薬局開設許可証の写し</li>
+                    <li>管理薬剤師の薬剤師免許証の写し</li>
+                    <li>従業員名簿</li>
+                    <li>薬局の平面図</li>
+                    <li>開設者の履歴書または登記事項証明書</li>
+                    <li>診療報酬の算定方法に係る届出書（各種加算を算定する場合）</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4 class="font-bold text-lg mb-2 text-blue-600">💡 スケジュールの注意点</h4>
+                    <p class="mb-0">保険薬局の指定は、通常、申請した月の翌月1日付けで行われます。例えば、1月中に申請すれば2月1日付けで指定されます。開業予定日から逆算して、余裕を持って申請しましょう。</p>
+                </div>
+
+                <h3>算定できる加算</h3>
+                <p>保険薬局として指定されると、以下のような加算を算定できます：</p>
+                <ul>
+                    <li>基準調剤加算</li>
+                    <li>後発医薬品調剤体制加算</li>
+                    <li>かかりつけ薬剤師指導料</li>
+                    <li>服薬管理指導料</li>
+                    <li>在宅患者訪問薬剤管理指導料</li>
+                </ul>
+
+                <h2>4. 医薬品卸売販売業許可（卸から医薬品を仕入れる場合）</h2>
+                
+                <p>
+                    薬局が医薬品卸売業者から医薬品を仕入れる際、薬局開設許可だけでは不十分な場合があります。大量に仕入れたり、他の薬局に販売したりする場合は、医薬品卸売販売業許可が必要になることがあります。
+                </p>
+
+                <div class="info-box">
+                    <h4 class="font-bold text-lg mb-2 text-accent-orange">📌 確認が必要です</h4>
+                    <p class="mb-0">通常の薬局業務であれば、薬局開設許可だけで医薬品の仕入れは可能です。ただし、事業形態によっては別途許可が必要な場合があるため、保健所に確認することをおすすめします。</p>
+                </div>
+
+                <h2>5. 麻薬小売業者免許（麻薬を取り扱う場合）</h2>
+                
+                <p>
+                    医療用麻薬（モルヒネ、オキシコドンなど）を取り扱う薬局は、都道府県知事から「麻薬小売業者免許」を取得する必要があります。
+                </p>
+
+                <h3>申請の流れ</h3>
+                <ol>
+                    <li>薬局開設許可の取得</li>
+                    <li>麻薬小売業者免許申請書を保健所に提出</li>
+                    <li>麻薬管理者を選任（薬剤師に限る）</li>
+                    <li>免許証の交付（有効期間は無期限だが、許可事項に変更があれば届出が必要）</li>
+                </ol>
+
+                <h3>麻薬の保管設備</h3>
+                <p>
+                    麻薬を取り扱う薬局は、以下の保管設備を備える必要があります：
+                </p>
+                <ul>
+                    <li><strong>麻薬金庫</strong>：堅固な金庫またはロッカー（麻薬専用）</li>
+                    <li><strong>麻薬帳簿</strong>：麻薬の受払いを記録する帳簿（30年間保存）</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h4 class="font-bold text-lg mb-2 text-red-600">⚠️ 厳重な管理が必要</h4>
+                    <p class="mb-0">麻薬の管理は非常に厳格で、紛失や盗難があった場合は直ちに警察に届け出る必要があります。また、定期的に都道府県の監視員による立入検査が行われます。</p>
+                </div>
+
+                <h2>6. 開業届・税務関連の手続き</h2>
+                
+                <h3>個人で開業する場合</h3>
+                <ul>
+                    <li><strong>個人事業の開業・廃業等届出書</strong>：税務署に提出（開業から1か月以内）</li>
+                    <li><strong>青色申告承認申請書</strong>：税務署に提出（開業から2か月以内、または確定申告期限まで）</li>
+                    <li><strong>給与支払事務所等の開設届出書</strong>：従業員を雇用する場合は税務署に提出（1か月以内）</li>
+                </ul>
+
+                <h3>法人で開業する場合</h3>
+                <ul>
+                    <li><strong>法人設立届出書</strong>：税務署・都道府県・市町村に提出（設立から2か月以内）</li>
+                    <li><strong>青色申告の承認申請書</strong>：税務署に提出（設立から3か月以内）</li>
+                    <li><strong>給与支払事務所等の開設届出書</strong>：税務署に提出（1か月以内）</li>
+                </ul>
+
+                <div class="tip-box">
+                    <h4 class="font-bold text-lg mb-2 text-blue-600">💡 節税のアドバイス</h4>
+                    <p class="mb-0">青色申告を利用すれば、個人事業主は最大65万円の特別控除、法人は欠損金の繰越控除などの税制優遇を受けられます。開業時に必ず申請しておきましょう。</p>
+                </div>
+
+                <h2>7. 労働保険・社会保険の加入（従業員を雇う場合）</h2>
+                
+                <h3>労働保険（労災保険・雇用保険）</h3>
+                <p>
+                    従業員を1人でも雇用する場合、労働保険への加入が義務付けられています。
+                </p>
+                <ul>
+                    <li><strong>労災保険</strong>：労働基準監督署に「保険関係成立届」を提出（雇用開始から10日以内）</li>
+                    <li><strong>雇用保険</strong>：ハローワークに「適用事業所設置届」を提出（雇用開始から10日以内）</li>
+                </ul>
+
+                <h3>社会保険（健康保険・厚生年金）</h3>
+                <p>
+                    法人の場合、または個人事業主でも従業員が5人以上の場合は、社会保険への加入が必要です。
+                </p>
+                <ul>
+                    <li><strong>健康保険・厚生年金保険新規適用届</strong>：年金事務所に提出（適用事業所になった日から5日以内）</li>
+                    <li><strong>被保険者資格取得届</strong>：年金事務所に提出（雇用開始から5日以内）</li>
+                </ul>
+
+                <h2>8. その他の届出・手続き</h2>
+                
+                <h3>防火管理者の選任</h3>
+                <p>
+                    薬局の収容人員が30人以上の場合、消防法により防火管理者を選任し、消防署に届け出る必要があります。
+                </p>
+
+                <h3>毒物劇物販売業の届出</h3>
+                <p>
+                    一般用医薬品以外で毒物または劇物に該当する製品を販売する場合は、保健所に毒物劇物販売業の届出が必要です。
+                </p>
+
+                <h3>特定医療材料の届出</h3>
+                <p>
+                    在宅医療に関わる特定医療材料（酸素療法用品、栄養剤など）を取り扱う場合は、地方厚生局に届出が必要です。
+                </p>
+
+                <h2>9. 薬局開業のスケジュール</h2>
+                
+                <p>スムーズな開業のために、以下のスケジュールを参考にしてください：</p>
+
+                <div class="bg-gray-50 p-6 rounded-lg my-6">
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業12か月前〜</h3>
+                    <ul class="mb-6">
+                        <li>事業計画の策定</li>
+                        <li>資金調達（融資申請など）</li>
+                        <li>物件探し・契約</li>
+                        <li>管理薬剤師の確保</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業6か月前〜</h3>
+                    <ul class="mb-6">
+                        <li>保健所への事前相談（図面持参）</li>
+                        <li>内装設計・施工業者の選定</li>
+                        <li>薬局システム（レセコン）の選定</li>
+                        <li>医薬品卸業者との契約準備</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業3〜4か月前</h3>
+                    <ul class="mb-6">
+                        <li>内装工事開始</li>
+                        <li>薬局開設許可申請書の準備</li>
+                        <li>スタッフの採用活動</li>
+                        <li>医薬品・備品の発注準備</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業2か月前</h3>
+                    <ul class="mb-6">
+                        <li>薬局開設許可申請書の提出</li>
+                        <li>保健所の現地調査</li>
+                        <li>薬局システムの導入・設定</li>
+                        <li>医薬品卸業者との契約締結</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業1か月前</h3>
+                    <ul class="mb-6">
+                        <li>薬局開設許可証の交付</li>
+                        <li>保険薬局指定申請の提出</li>
+                        <li>麻薬小売業者免許申請（必要な場合）</li>
+                        <li>医薬品の納品・在庫管理準備</li>
+                        <li>スタッフ研修の実施</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業日</h3>
+                    <ul class="mb-6">
+                        <li>保険薬局の指定発効</li>
+                        <li>営業開始</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">開業後1か月以内</h3>
+                    <ul>
+                        <li>個人事業の開業届または法人設立届の提出</li>
+                        <li>労働保険・社会保険の加入手続き</li>
+                        <li>青色申告承認申請書の提出</li>
+                    </ul>
+                </div>
+
+                <h2>10. 薬局開業にかかる費用の目安</h2>
+                
+                <p>薬局開業には、以下のような費用がかかります：</p>
+
+                <div class="bg-gray-50 p-6 rounded-lg my-6">
+                    <h3 class="text-xl font-bold mb-4 text-main-navy">初期費用</h3>
+                    <ul class="mb-6">
+                        <li><strong>物件取得費</strong>：保証金、敷金、礼金など（家賃の6〜12か月分程度）</li>
+                        <li><strong>内装工事費</strong>：1,000万円〜3,000万円（規模による）</li>
+                        <li><strong>設備・機器</strong>：薬局システム（レセコン）、調剤機器など500万円〜1,000万円</li>
+                        <li><strong>医薬品在庫</strong>：初期在庫として500万円〜1,000万円</li>
+                        <li><strong>許可申請費用</strong>：薬局開設許可、保険薬局指定など5万円〜10万円</li>
+                        <li><strong>その他</strong>：看板、備品、広告宣伝費など100万円〜300万円</li>
+                    </ul>
+                    <p class="font-bold text-lg text-main-navy">合計：約2,500万円〜5,000万円</p>
+                </div>
+
+                <h2>11. まとめ：専門家への相談をご検討ください</h2>
+                
+                <p>
+                    薬局の開業には、薬局開設許可、保険薬局指定、麻薬小売業者免許など、多くの許可・届出手続きが必要です。手続きは複雑で、漏れがあると開業が大幅に遅れたり、保険調剤ができなかったりする可能性があります。
+                </p>
+
+                <p>
+                    特に以下のようなケースでは、行政書士などの専門家に相談することをおすすめします：
+                </p>
+
+                <ul>
+                    <li>初めて薬局を開業し、手続きに不安がある</li>
+                    <li>麻薬小売業者免許など、複数の許可が必要な場合</li>
+                    <li>短期間で確実に許可を取得したい</li>
+                    <li>開業準備で忙しく、手続きに時間を割けない</li>
+                    <li>法人設立から薬局開業まで一括してサポートしてほしい</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4 class="font-bold text-lg mb-2 text-accent-orange">🏢 当事務所のサポート</h4>
+                    <p>行政書士事務所では、薬局開業に関する以下のサービスを提供しています：</p>
+                    <ul class="mt-2 mb-2">
+                        <li>薬局開設許可申請の代行</li>
+                        <li>保険薬局指定申請の代行</li>
+                        <li>麻薬小売業者免許申請の代行</li>
+                        <li>保健所・地方厚生局との事前協議同行</li>
+                        <li>開業スケジュールの立案とアドバイス</li>
+                        <li>法人設立から開業までのワンストップサポート</li>
+                        <li>労働保険・社会保険加入サポート</li>
+                    </ul>
+                    <p class="mb-0 font-semibold">初回相談は無料ですので、お気軽にご相談ください。</p>
+                </div>
+
+                <p class="text-lg font-semibold mt-8">
+                    薬局開業は、地域医療に貢献する素晴らしい事業です。綿密な準備と正確な手続きで、スムーズな開業を実現しましょう。ご不明な点があれば、いつでもお問い合わせください。
+                </p>
+
+            </div>
+
+            <!-- 関連記事 -->
+            <section class="mt-16 pt-8 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-main-navy mb-6">関連記事</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <a href="restaurant-permits.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-32 bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
+                        <div class="p-4">
+                            <span class="inline-block px-2 py-1 text-xs font-bold text-white bg-indigo-500 rounded-full mb-2">営業許認可</span>
+                            <h3 class="text-lg font-bold text-main-navy mb-2">飲食店開業前に必ず確認したい許可と届出</h3>
+                            <p class="text-sm text-gray-600">営業許可、営業届出、食品衛生責任者...開業に必要な手続きを完全ガイド。</p>
+                        </div>
+                    </a>
+
+                    <a href="antique-dealer-permit.html" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                        <div class="h-32 bg-gradient-to-br from-indigo-400 to-indigo-600"></div>
+                        <div class="p-4">
+                            <span class="inline-block px-2 py-1 text-xs font-bold text-white bg-indigo-500 rounded-full mb-2">営業許認可</span>
+                            <h3 class="text-lg font-bold text-main-navy mb-2">古物商営業許可が必要な業態とは？取得手続きを徹底解説</h3>
+                            <p class="text-sm text-gray-600">リサイクルショップ、古本屋、中古車販売...中古品ビジネスに必要な許可を完全ガイド。</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="mt-16 accent-orange rounded-2xl p-8 md:p-12 text-center shadow-action">
+                <h2 class="text-3xl font-black text-white mb-4">薬局開業のご相談は<br>お気軽にお問い合わせください</h2>
+                <p class="text-lg text-gray-100 mb-6">初回相談無料 / 土日祝も対応可能</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="bg-white text-accent-orange font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block shadow-lg transform hover:scale-105">
+                        お問い合わせフォーム
+                    </a>
+                    <a href="tel:0123456789" class="bg-main-navy text-white font-bold py-3 px-8 rounded-full hover:bg-[#1a3a54] transition duration-300 inline-block shadow-lg transform hover:scale-105">
+                        📞 電話で相談する
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="main-navy py-8 text-sm text-gray-400">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="space-x-4 mb-4">
+                <a href="services.html" class="hover:text-white transition duration-300">主な取扱業務</a>
+                <span>|</span>
+                <a href="price.html" class="hover:text-white transition duration-300">料金表</a>
+                <span>|</span>
+                <a href="index.html#about" class="hover:text-white transition duration-300">事務所概要</a>
+            </nav>
+            <p class="mt-4 text-gray-500">&copy; 2025 行政書士事務所. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
