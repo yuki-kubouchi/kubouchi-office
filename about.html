@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事務所概要 | 行政書士事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        .main-navy {
+            background-color: #11293c;
+            color: white;
+        }
+        .text-main-navy {
+            color: #11293c;
+        }
+        .accent-orange {
+            background-color: #f97316;
+            color: white;
+        }
+        .text-accent-orange {
+            color: #f97316;
+        }
+        .shadow-action {
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="main-navy sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold tracking-wider text-white flex items-center">
+                <img src="images/zbr4ilz7_400x400.jpg" alt="行政書士徽章" class="w-10 h-10 mr-3 object-contain rounded-full">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">行政書士事務所</a>
+            </h1>
+            <!-- PC用ナビゲーション -->
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-semibold">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">ホーム</a>
+                <a href="services.html" class="hover:text-accent-orange transition duration-300">主な取扱業務</a>
+                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金表</a>
+                <a href="index.html#greeting" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+                <a href="contents.html" class="hover:text-accent-orange transition duration-300">コンテンツ</a>
+                <a href="about.html" class="hover:text-accent-orange transition duration-300">事務所概要</a>
+                <a href="index.html#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">お問い合わせ</a>
+            </nav>
+            <!-- スマホ用メニューボタン -->
+            <div class="md:hidden relative">
+                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]">☰</button>
+                <!-- ドロワーメニュー -->
+                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
+                    <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">主な取扱業務</a>
+                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金表</a>
+                    <a href="index.html#greeting" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                    <a href="contents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">コンテンツ</a>
+                    <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">事務所概要</a>
+                    <a href="index.html#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">お問い合わせ</a>
+                </div>
+            </div>
+            
+            <script>
+                document.getElementById('menuButton').addEventListener('click', function() {
+                    const menu = document.getElementById('mobileMenu');
+                    menu.classList.toggle('hidden');
+                });
+                
+                document.addEventListener('click', function(event) {
+                    const menu = document.getElementById('mobileMenu');
+                    const button = document.getElementById('menuButton');
+                    if (!menu.contains(event.target) && !button.contains(event.target)) {
+                        menu.classList.add('hidden');
+                    }
+                });
+            </script>
+        </div>
+    </header>
+
+    <!-- ページタイトル -->
+    <section class="bg-white pt-16 pb-8 md:pt-24 md:pb-12 border-b border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-main-navy mb-4">事務所概要</h1>
+            <p class="text-lg text-gray-600">行政書士事務所についてご紹介します。</p>
+        </div>
+    </section>
+
+    <!-- 事務所情報 -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 max-w-5xl">
+            
+            <!-- 基本情報 -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-md mb-12 border-l-8 border-accent-orange">
+                <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-8">基本情報</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">事務所名</p>
+                        <p class="text-xl font-bold text-main-navy mb-6">行政書士事務所</p>
+
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">代表者</p>
+                        <p class="text-xl font-bold text-main-navy mb-6">代表行政書士</p>
+
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">資格</p>
+                        <p class="text-lg text-main-navy mb-6">
+                            <span class="block">行政書士（〇〇県行政書士会 会員番号：XXXXX）</span>
+                            <span class="block text-sm text-gray-600 mt-2">薬局店長出身者による実務に即した実績</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">所在地</p>
+                        <p class="text-lg text-main-navy mb-6">
+                            〒XXX-XXXX<br>
+                            〇〇県〇〇市〇〇町 X-X-X<br>
+                            <span class="text-sm text-gray-600">（〇〇駅より徒歩X分）</span>
+                        </p>
+
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">電話番号</p>
+                        <p class="text-lg text-main-navy font-bold mb-6">
+                            <a href="tel:0000-XX-XXXX" class="hover:text-accent-orange transition duration-300">0000-XX-XXXX</a>
+                        </p>
+
+                        <p class="text-sm font-bold text-accent-orange uppercase tracking-widest mb-2">営業時間</p>
+                        <p class="text-lg text-main-navy mb-2">平日：9:00〜18:00</p>
+                        <p class="text-sm text-gray-600">土日祝日は予約制で対応</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行政書士紹介 -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-md mb-12 border-l-8 border-accent-orange">
+                <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-8">代表行政書士 代表行政書士</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 写真 -->
+                    <div class="md:col-span-1">
+                        <div class="w-full h-80 bg-gradient-to-br from-accent-orange to-orange-400 rounded-xl shadow-md flex items-center justify-center">
+                            <span class="text-white text-lg">写真</span>
+                        </div>
+                    </div>
+
+                    <!-- プロフィール -->
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold text-accent-orange mb-4">薬局店長としての豊富な経験</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            調剤併設型ドラッグストアで店長として8年間勤務。薬局運営、保健所対応、許認可申請など、現場の最前線で業務を遂行してきました。薬局開業に必要な実務知識を熟知しているからこそ、お客様にとって最適で確実な開業サポートが提供できます。
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-accent-orange mb-4">行政書士資格取得後の実績</h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            行政書士資格取得後は、薬局開業を中心に多くのお客様のご相談に対応。特に調剤薬局・ドラッグストアの開業、法人設立、各種許認可申請など、薬局業界の実務経験を活かした専門的なサポートを提供しています。「現場を知る行政書士」として、実務に即したアドバイスを心がけています。
+                        </p>
+
+                        <div class="mt-8 p-6 bg-gray-50 rounded-lg border-l-4 border-accent-orange">
+                            <p class="text-sm text-gray-600 mb-2">📊 実績（累計）</p>
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <p class="text-3xl font-black text-accent-orange">8年</p>
+                                    <p class="text-sm text-gray-700 mt-1">薬局店長経験</p>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-3xl font-black text-accent-orange">50+</p>
+                                    <p class="text-sm text-gray-700 mt-1">薬局開業サポート</p>
+                                </div>
+                                <div class="text-center">
+                                    <p class="text-3xl font-black text-accent-orange">100+</p>
+                                    <p class="text-sm text-gray-700 mt-1">許認可申請</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 事務所の強み -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-md mb-12 border-l-8 border-accent-orange">
+                <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-8">当事務所の強み</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">💡 薬局店長経験を活かした開業支援</h3>
+                        <p class="text-gray-700">調剤併設型ドラッグストアでの8年間の店長経験から、薬局開業に必要な実務的なノウハウを熟知。保健所対応から運営まで、実務に即した最適なサポートを提供します。</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">📋 薬局開業の複雑な手続きも完全対応</h3>
+                        <p class="text-gray-700">薬局開業許可、医薬品販売業許可、保険薬局指定申請など、薬局特有の複雑な許認可手続きも完全サポート。現場経験を活かした確実な申請を実現します。</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">🤝 ご依頼者に寄り添う姿勢</h3>
+                        <p class="text-gray-700">「わからないことを丁寧に説明する」をモットーに、ご依頼者の不安や疑問に真摯に向き合います。</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">⚡ 初回相談は無料</h3>
+                        <p class="text-gray-700">費用面での不安もないよう、初回相談は完全無料。お気軽にご相談いただけます。</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">📱 メール対応も充実</h3>
+                        <p class="text-gray-700">お忙しい方には24時間メール受付。詳細をまとめてからご相談いただけます。</p>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl border-2 border-accent-orange">
+                        <h3 class="text-xl font-bold text-accent-orange mb-3">🌍 多言語対応</h3>
+                        <p class="text-gray-700">ビザ申請など、外国人のご依頼者にも対応。言語の壁もありません。</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- アクセス情報 -->
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-md border-l-8 border-accent-orange">
+                <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-8">アクセス</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- 地図 -->
+                    <div>
+                        <div class="w-full h-80 bg-gradient-to-br from-blue-200 to-blue-300 rounded-xl shadow-md flex items-center justify-center">
+                            <span class="text-white text-lg">地図を表示予定</span>
+                        </div>
+                    </div>
+
+                    <!-- アクセス情報 -->
+                    <div>
+                        <p class="text-lg font-bold text-main-navy mb-6">
+                            <span class="block mb-2">行政書士事務所</span>
+                            <span class="text-base font-normal text-gray-700">
+                                〒XXX-XXXX<br>
+                                〇〇県〇〇市〇〇町 X-X-X<br>
+                                ビル名 X階
+                            </span>
+                        </p>
+
+                        <h3 class="text-xl font-bold text-accent-orange mb-4">電車でのアクセス</h3>
+                        <ul class="space-y-3 mb-8 text-gray-700">
+                            <li>• 〇〇線「〇〇駅」より徒歩X分</li>
+                            <li>• 〇〇線「△△駅」より徒歩X分</li>
+                            <li>• 〇〇駅から、北口を出て直進</li>
+                        </ul>
+
+                        <h3 class="text-xl font-bold text-accent-orange mb-4">お車でのアクセス</h3>
+                        <ul class="space-y-3 mb-8 text-gray-700">
+                            <li>• 〇〇ICより国道〇号線で約X分</li>
+                            <li>• 事務所正面に駐車スペースあり（X台分）</li>
+                            <li>• 周辺にコインパーキングも複数あります</li>
+                        </ul>
+
+                        <div class="p-6 bg-accent-orange rounded-xl text-white">
+                            <p class="font-bold mb-2">営業時間</p>
+                            <p class="text-lg">平日：9:00〜18:00</p>
+                            <p class="text-sm mt-4">土日祝日は予約制で対応いたします</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-black text-main-navy mb-12 text-center">よくある質問</h2>
+
+            <div class="space-y-6">
+                
+                <!-- FAQ 1 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        初回相談は本当に無料ですか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        はい、初回相談は完全無料です。お電話またはメールで、お気軽にご相談ください。ご依頼いただかない場合でも、費用は一切かかりません。
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        どのくらいで手続きが完了しますか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        手続きの種類によって異なります。簡単な許認可なら1〜2週間、相続手続きのように複雑な案件は1〜3ヶ月程度かかる場合があります。ご相談時に詳しくご説明します。
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        夜間や休日の相談はできますか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        事務所での対面相談は平日9:00〜18:00です。ただし、ご相談内容に応じて夜間や休日のご対応も可能です。メール、お電話でご相談ください。
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        遠方からの依頼も対応していますか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        対応可能です。郵送・メール・お電話でやり取りしながら、遠方のお客様の手続きもサポートします。実際に全国からのご依頼をいただいています。
+                    </p>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        複数の手続きを同時にお願いできますか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        もちろんです。法人設立と許認可、相続と遺言など、関連する複数の手続きは、一括でお引き受けすると割引対応も可能です。ご相談ください。
+                    </p>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="bg-gray-50 p-6 md:p-8 rounded-xl border-l-4 border-accent-orange">
+                    <h3 class="text-lg font-bold text-main-navy mb-3 flex items-start">
+                        <span class="text-accent-orange font-black mr-3">Q.</span>
+                        着手金は必要ですか？
+                    </h3>
+                    <p class="text-gray-700 ml-9">
+                        手続きの種類によって異なります。着手金が不要な場合もあります。詳しくはご相談時にご説明いたします。
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 md:py-24 accent-orange">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6">まずはお気軽にご相談ください</h2>
+            <p class="text-xl text-gray-100 mb-10">初回相談は完全無料。あなたの不安を解消する最適な方法をご提案します。</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:0000-XX-XXXX" class="bg-white text-accent-orange font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 inline-block shadow-action transform hover:scale-105">
+                    📞 お電話でのご相談
+                </a>
+                <a href="index.html#contact" class="bg-main-navy text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-800 transition duration-300 inline-block shadow-action transform hover:scale-105">
+                    ✉️ メールでのご相談
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="main-navy py-8 text-sm text-gray-400">
+        <div class="container mx-auto px-6 text-center">
+            <nav class="space-x-4 mb-4">
+                <a href="services.html" class="hover:text-white transition duration-300">主な取扱業務</a>
+                <span>|</span>
+                <a href="price.html" class="hover:text-white transition duration-300">料金表</a>
+                <span>|</span>
+                <a href="about.html" class="hover:text-white transition duration-300">事務所概要</a>
+            </nav>
+            <p class="mt-4 text-gray-500">&copy; 2025 行政書士事務所. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
