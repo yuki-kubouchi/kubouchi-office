@@ -112,9 +112,7 @@
                 <button class="service-tab px-6 py-3 rounded-full font-bold bg-white text-gray-700 hover:bg-gray-100 transition duration-300 border-2 border-gray-200 hover:border-accent-orange" data-tab="inheritance">
                     相続・遺言
                 </button>
-                <button class="service-tab px-6 py-3 rounded-full font-bold bg-white text-gray-700 hover:bg-gray-100 transition duration-300 border-2 border-gray-200 hover:border-accent-orange" data-tab="immigration">
-                    入国管理・ビザ
-                </button>
+                <!-- 入国管理・ビザは現在未対応のため一時外す -->
                 <button class="service-tab px-6 py-3 rounded-full font-bold bg-white text-gray-700 hover:bg-gray-100 transition duration-300 border-2 border-gray-200 hover:border-accent-orange" data-tab="other">
                     その他手続き
                 </button>
@@ -124,33 +122,6 @@
             <div id="business" class="service-content">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     
-                    <!-- 会社設立 -->
-                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
-                        <h3 class="text-3xl font-bold text-main-navy mb-4">📋 会社設立</h3>
-                        <p class="text-gray-600 mb-6">株式会社・合同会社の設立から登記申請まで、全てをサポート。定款作成から法務局への申請代行までを一括で対応いたします。</p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">定款作成・認証手続き</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">登記申請書類一式作成</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">法務局への申請代行</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">決算日・事業年度の設定支援</span>
-                            </li>
-                        </ul>
-                        <p class="text-sm text-gray-500 mb-4">📞 平均対応期間：1〜2週間</p>
-                        <a href="index.html#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
-                            相談する
-                        </a>
-                    </div>
 
                     <!-- 飲食店営業許可 -->
                     <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
@@ -231,6 +202,34 @@
                             </li>
                         </ul>
                         <p class="text-sm text-gray-500 mb-4">📞 平均対応期間：4〜6週間</p>
+                        <a href="index.html#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <!-- 薬局開業申請 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
+                        <h3 class="text-3xl font-bold text-main-navy mb-4">💊 薬局開業申請</h3>
+                        <p class="text-gray-600 mb-6">薬局の新規開業に必要な許認可手続き全般をサポートします。保健所・薬務課との調整から設置基準、マニュアル作成まで対応。</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <span class="text-accent-orange font-bold mr-3">✓</span>
+                                <span class="text-gray-700">開設計画書・配置図の作成</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent-orange font-bold mr-3">✓</span>
+                                <span class="text-gray-700">薬剤師・管理者要件の確認</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent-orange font-bold mr-3">✓</span>
+                                <span class="text-gray-700">監査対応・書類提出代行</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent-orange font-bold mr-3">✓</span>
+                                <span class="text-gray-700">開局後の運用支援</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">📞 平均対応期間：4〜8週間</p>
                         <a href="index.html#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
                             相談する
                         </a>
@@ -358,8 +357,8 @@
                 </div>
             </div>
 
-            <!-- 入国管理・ビザタブ -->
-            <div id="immigration" class="service-content hidden">
+            <!-- 入国管理・ビザタブ (一時非表示・未対応) -->
+            <div id="immigration" class="service-content hidden" style="display:none;">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     
                     <!-- 就労ビザ -->
@@ -504,34 +503,6 @@
                             </li>
                         </ul>
                         <p class="text-sm text-gray-500 mb-4">📞 平均対応期間：1〜2週間</p>
-                        <a href="index.html#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
-                            相談する
-                        </a>
-                    </div>
-
-                    <!-- 不動産登記 -->
-                    <div class="bg-white p-8 rounded-xl shadow-md border-l-8 border-accent-orange">
-                        <h3 class="text-3xl font-bold text-main-navy mb-4">🏘️ 不動産登記手続き</h3>
-                        <p class="text-gray-600 mb-6">不動産の所有権移転登記から抵当権設定まで。複雑な登記手続きをスムーズに進めます。</p>
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">所有権移転登記</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">抵当権設定・抹消</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">地目変更登記</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="text-accent-orange font-bold mr-3">✓</span>
-                                <span class="text-gray-700">相続登記対応</span>
-                            </li>
-                        </ul>
-                        <p class="text-sm text-gray-500 mb-4">📞 平均対応期間：2〜3週間</p>
                         <a href="index.html#contact" class="w-full accent-orange text-white font-bold py-2 px-4 rounded-lg text-center hover:bg-orange-500 transition duration-300 block">
                             相談する
                         </a>
