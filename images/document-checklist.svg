@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)" />
+  <rect x="220" y="220" width="760" height="480" rx="36" fill="rgba(255,255,255,0.18)" />
+  <line x1="330" y1="300" x2="870" y2="300" stroke="#ffffff" stroke-width="18" stroke-linecap="round" />
+  <line x1="330" y1="380" x2="870" y2="380" stroke="#ffffff" stroke-width="18" stroke-linecap="round" />
+  <line x1="330" y1="460" x2="760" y2="460" stroke="#ffffff" stroke-width="18" stroke-linecap="round" />
+  <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="Noto Sans JP, sans-serif" font-size="64" fill="#ffffff" font-weight="900">書類準備</text>
+</svg>
