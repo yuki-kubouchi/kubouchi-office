@@ -13,6 +13,21 @@
       gtag('config', 'G-X4G3GND7DN');
     </script>
     <title>くぼうち行政書士事務所 | 手続きストレスを解消する専門家</title>
+
+    <meta name="description" content="くぼうち行政書士事務所の公式サイト。法人設立から許認可、相続・ビザ手続きまで、行政書士が丁寧にサポートします。">
+
+    <meta property="og:title" content="くぼうち行政書士事務所 | 手続きストレスを解消する専門家">
+    <meta property="og:description" content="くぼうち行政書士事務所の公式サイト。法人設立から許認可、相続・ビザ手続きまで、行政書士が丁寧にサポートします。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kubouchi-office.com/index.html">
+    <meta property="og:image" content="https://kubouchi-office.com/images/zbr4ilz7_400x400.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kubouchiOffice">
+    <meta name="twitter:creator" content="@kubouchiOffice">
+    <meta name="twitter:title" content="くぼうち行政書士事務所 | 手続きストレスを解消する専門家">
+    <meta name="twitter:description" content="くぼうち行政書士事務所の公式サイト。法人設立から許認可、相続・ビザ手続きまで、行政書士が丁寧にサポートします。">
+    <meta name="twitter:image" content="https://kubouchi-office.com/images/zbr4ilz7_400x400.jpg">
     <link rel="icon" href="images/zbr4ilz7_400x400.jpg" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -36,10 +51,8 @@
         .text-accent-orange {
             color: #f97316;
         }
-        .shadow-action {
-            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
-        }
-        @keyframes bounce {
+        .shadow-action { box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1); }
+@keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
                 opacity: 0.7;
@@ -51,6 +64,24 @@
         }
         .animate-bounce-slow {
             animation: bounce 2s infinite;
+        }
+
+            header h1 {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        header h1 a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            font-size: 1rem;
+            max-width: 100%;
+        }
+        @media (max-width: 640px) {
+            header h1 a {
+                font-size: 0.92rem;
+            }
         }
     </style>
 </head>

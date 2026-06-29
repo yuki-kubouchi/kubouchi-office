@@ -13,6 +13,21 @@
       gtag('config', 'G-X4G3GND7DN');
     </script>
     <title>ご挨拶 | くぼうち行政書士事務所</title>
+
+    <meta name="description" content="代表ご挨拶ページ。くぼうち行政書士事務所の想いと業務方針をご紹介します。">
+
+    <meta property="og:title" content="ご挨拶 | くぼうち行政書士事務所">
+    <meta property="og:description" content="代表ご挨拶ページ。くぼうち行政書士事務所の想いと業務方針をご紹介します。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kubouchi-office.com/greeting.html">
+    <meta property="og:image" content="https://kubouchi-office.com/images/zbr4ilz7_400x400.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kubouchiOffice">
+    <meta name="twitter:creator" content="@kubouchiOffice">
+    <meta name="twitter:title" content="ご挨拶 | くぼうち行政書士事務所">
+    <meta name="twitter:description" content="代表ご挨拶ページ。くぼうち行政書士事務所の想いと業務方針をご紹介します。">
+    <meta name="twitter:image" content="https://kubouchi-office.com/images/zbr4ilz7_400x400.jpg">
     <link rel="icon" href="images/zbr4ilz7_400x400.jpg" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
@@ -36,8 +51,24 @@
         .text-accent-orange {
             color: #f97316;
         }
-        .shadow-action {
-            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1);
+        .shadow-action { box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3), 0 4px 6px -2px rgba(249, 115, 22, 0.1); }
+
+            header h1 {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        header h1 a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            font-size: 1rem;
+            max-width: 100%;
+        }
+        @media (max-width: 640px) {
+            header h1 a {
+                font-size: 0.92rem;
+            }
         }
     </style>
 </head>
