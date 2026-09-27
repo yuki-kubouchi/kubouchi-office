@@ -139,55 +139,55 @@
 <body>
 
     <!-- ヘッダー -->
-    <header class="main-navy sticky top-0 z-50 shadow-lg">
+        <header class="main-navy sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold tracking-wider text-white flex items-center">
-                <img src="images/zbr4ilz7_400x400.jpg" alt="行政書士徽章" class="w-10 h-10 mr-3 object-contain rounded-full">
-                <a href="/" class="hover:text-accent-orange transition duration-300">くぼうち行政書士事務所</a>
+            <h1 class="text-xl md:text-2xl font-extrabold tracking-wider text-white flex items-center">
+                <img src="images/zbr4ilz7_400x400.jpg" alt="くぼうち行政書士事務所のロゴ" class="w-10 h-10 mr-3 object-contain rounded-full">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">くぼうち行政書士事務所</a>
             </h1>
-            <!-- PC用ナビゲーション -->
-            <nav class="hidden md:flex items-center space-x-12 text-sm font-semibold">
-                <a href="/" class="hover:text-accent-orange transition duration-300">ホーム</a>
-                <a href="services.html" class="hover:text-accent-orange transition duration-300">主な取扱業務</a>
-                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金表</a>
-                <a href="greeting.html" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="index.html" class="hover:text-accent-orange transition duration-300">ホーム</a>
+                <a href="price.html" class="hover:text-accent-orange transition duration-300">料金</a>
                 <a href="contents.html" class="hover:text-accent-orange transition duration-300">コンテンツ</a>
                 <a href="about.html" class="hover:text-accent-orange transition duration-300">事務所概要</a>
-                <a href="/#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">お問い合わせ</a>
+                <a href="greeting.html" class="hover:text-accent-orange transition duration-300">ご挨拶</a>
+                <a href="index.html#contact" class="accent-orange text-white py-2 px-4 rounded-full font-bold hover:bg-orange-500 transition duration-300 shadow-md">無料相談</a>
             </nav>
-            <!-- スマホ用メニューボタン -->
+
             <div class="md:hidden relative">
-                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]">☰</button>
-                <!-- ドロワーメニュー -->
-                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                    <a href="/" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
-                    <a href="services.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">主な取扱業務</a>
-                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金表</a>
-                    <a href="greeting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                <button id="menuButton" class="text-white text-xl p-2 rounded-md hover:bg-[#1a3a54]" aria-label="メニュー">☰</button>
+                <div id="mobileMenu" class="hidden absolute right-0 mt-2 w-52 bg-white rounded-md shadow-lg py-1 z-50">
+                    <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ホーム</a>
+                    <a href="price.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">料金</a>
                     <a href="contents.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">コンテンツ</a>
                     <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">事務所概要</a>
-                    <a href="/#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">お問い合わせ</a>
+                    <a href="greeting.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ご挨拶</a>
+                    <a href="index.html#contact" class="block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600">無料相談</a>
                 </div>
             </div>
-            
-            <script>
-                document.getElementById('menuButton').addEventListener('click', function() {
-                    const menu = document.getElementById('mobileMenu');
-                    menu.classList.toggle('hidden');
-                });
-                
-                document.addEventListener('click', function(event) {
-                    const menu = document.getElementById('mobileMenu');
-                    const button = document.getElementById('menuButton');
-                    if (!menu.contains(event.target) && !button.contains(event.target)) {
-                        menu.classList.add('hidden');
-                    }
-                });
-            </script>
         </div>
     </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
 
-    <!-- ページタイトル -->
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                document.addEventListener('click', function(event) {
+                    const target = event.target;
+                    if (!mobileMenu.contains(target) && !menuButton.contains(target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+<!-- ページタイトル -->
     <section class="bg-white pt-16 pb-8 md:pt-24 md:pb-12 border-b border-gray-200">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-4xl md:text-5xl font-black text-main-navy mb-4">お役立ちコンテンツ</h1>
@@ -205,10 +205,11 @@
                     <input type="text" id="searchInput" placeholder="記事を検索..." class="flex-1 px-6 py-3 rounded-full border-2 border-gray-300 focus:border-accent-orange focus:outline-none">
                     <select id="categoryFilter" class="px-6 py-3 rounded-full border-2 border-gray-300 focus:border-accent-orange focus:outline-none">
                         <option value="">すべてのカテゴリ</option>
-                        <option value="business">法人設立</option>
-                        <option value="permits">営業許認可</option>
-                        <option value="inheritance">相続</option>
-                        <option value="visa">ビザ</option>
+                        <option value="business">法人・新規事業・IT</option>
+                        <option value="permits">薬局・医療</option>
+                        <option value="restaurant">飲食店・店舗</option>
+                        <option value="inheritance">相続・遺言</option>
+                        <option value="visa">外国人・在留資格</option>
                         <option value="tips">手続きのコツ</option>
                     </select>
                 </div>
@@ -367,6 +368,62 @@
                         <div class="flex justify-between items-center text-xs text-gray-500">
                             <span>2026年1月25日</span>
                             <span>読む時間: 12分</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 新規記事 1 -->
+                <a href="contents/foreigner-employment-status.html" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer content-item block" data-category="visa">
+                    <div class="h-48 bg-gradient-to-br from-emerald-400 to-green-600"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-green-500 rounded-full mb-3">外国人・在留資格</span>
+                        <h3 class="text-xl font-bold text-main-navy mb-3">外国人を雇用するときの在留資格｜企業が最初に確認すべきこと</h3>
+                        <p class="text-gray-600 text-sm mb-4">採用前に確認したい在留資格、仕事内容との整合、在留期間や採用後の手続きまでをわかりやすく整理します。</p>
+                        <div class="flex justify-between items-center text-xs text-gray-500">
+                            <span>2026年9月28日</span>
+                            <span>読む時間: 7分</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 新規記事 2 -->
+                <a href="contents/pharmacy-opening-permit.html" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer content-item block" data-category="permits">
+                    <div class="h-48 bg-gradient-to-br from-sky-400 to-blue-600"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-blue-500 rounded-full mb-3">薬局・医療</span>
+                        <h3 class="text-xl font-bold text-main-navy mb-3">薬局を開業するには？必要な許可・準備を整理</h3>
+                        <p class="text-gray-600 text-sm mb-4">薬局開業に必要な許可、事前確認、施設・人員・開業準備、事前相談の考え方を整理します。</p>
+                        <div class="flex justify-between items-center text-xs text-gray-500">
+                            <span>2026年9月28日</span>
+                            <span>読む時間: 8分</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 新規記事 3 -->
+                <a href="contents/store-sales-business-permit.html" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer content-item block" data-category="permits">
+                    <div class="h-48 bg-gradient-to-br from-violet-400 to-fuchsia-600"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-violet-500 rounded-full mb-3">薬局・医療</span>
+                        <h3 class="text-xl font-bold text-main-navy mb-3">店舗販売業とは？薬局との違いを行政書士が解説</h3>
+                        <p class="text-gray-600 text-sm mb-4">店舗販売業と薬局の違い、許可が必要なケース、事前に確認すべきポイントを整理します。</p>
+                        <div class="flex justify-between items-center text-xs text-gray-500">
+                            <span>2026年9月28日</span>
+                            <span>読む時間: 7分</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 新規記事 4 -->
+                <a href="contents/restaurant-opening-permit.html" class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 cursor-pointer content-item block" data-category="restaurant">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500"></div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-orange-500 rounded-full mb-3">飲食店・店舗</span>
+                        <h3 class="text-xl font-bold text-main-navy mb-3">飲食店を開業するときに必要な許認可</h3>
+                        <p class="text-gray-600 text-sm mb-4">営業許可、物件選定前の確認、設計・工事前の準備、開業後の業務までをわかりやすく整理します。</p>
+                        <div class="flex justify-between items-center text-xs text-gray-500">
+                            <span>2026年9月28日</span>
+                            <span>読む時間: 8分</span>
                         </div>
                     </div>
                 </a>
