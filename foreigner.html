@@ -10,7 +10,15 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-X4G3GND7DN');
+            (function() {
+                const source = new URLSearchParams(window.location.search).get('from');
+                const validSources = ['main-card', 'foreign-card', 'pharmacy-card'];
+                if (validSources.includes(source)) {
+                    gtag('event', 'card_qr_visit', { card_source: source });
+                }
+            })();
     </script>
+    <link rel="icon" href="images/zbr4ilz7_400x400.jpg" type="image/jpeg">
     <title>外国人・在留資格・申請取次｜東京都の行政書士｜くぼうち行政書士事務所</title>
     <meta name="description" content="東京都文京区本郷のくぼうち行政書士事務所。外国人本人や企業の在留資格変更・更新・認定証明書・永住、外国人雇用、外国人の事業開始に関する相談を、申請取次行政書士として丁寧に整理し、必要な手続きをサポートします。">
     <link rel="canonical" href="https://kubouchi-office.com/foreigner.html">

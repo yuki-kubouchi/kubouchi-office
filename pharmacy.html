@@ -10,7 +10,15 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-X4G3GND7DN');
+            (function() {
+                const source = new URLSearchParams(window.location.search).get('from');
+                const validSources = ['main-card', 'foreign-card', 'pharmacy-card'];
+                if (validSources.includes(source)) {
+                    gtag('event', 'card_qr_visit', { card_source: source });
+                }
+            })();
     </script>
+    <link rel="icon" href="images/zbr4ilz7_400x400.jpg" type="image/jpeg">
     <title>薬局開設許可・保険薬局指定・店舗販売業許可｜東京都の行政書士｜くぼうち行政書士事務所</title>
     <meta name="description" content="東京都文京区本郷のくぼうち行政書士事務所。薬局開設許可、保険薬局指定、店舗販売業許可など薬局・医薬品販売事業の許認可と開業準備を支援。制度整理から開業後の業務整理・Web・IT・DXまで対応します。">
     <link rel="canonical" href="https://kubouchi-office.com/pharmacy.html">
